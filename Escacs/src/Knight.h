@@ -2,7 +2,7 @@
  * Knight.h
  *
  *  Created on: 28 gen. 2016
- *      Author: Jordi
+ *      Author: Jordi Marco
  */
 
 #ifndef KNIGHT_H_

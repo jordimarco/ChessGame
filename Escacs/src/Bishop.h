@@ -2,7 +2,7 @@
  * Bishop.h
  *
  *  Created on: 2 febr. 2016
- *      Author: Jordi
+ *      Author: Jordi Marco
  */
 
 #ifndef BISHOP_H_

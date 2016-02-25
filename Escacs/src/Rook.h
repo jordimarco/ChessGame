@@ -2,7 +2,7 @@
  * Rook.h
  *
  *  Created on: 2 febr. 2016
- *      Author: Jordi
+ *      Author: Jordi Marco
  */
 
 #ifndef ROOK_H_

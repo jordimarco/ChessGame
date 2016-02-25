@@ -2,7 +2,7 @@
  * Pawn.cpp
  *
  *  Created on: 28 gen. 2016
- *      Author: Jordi
+ *      Author: Jordi Marco
  */
 
 #include<cstdlib>
