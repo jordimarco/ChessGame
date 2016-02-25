@@ -2,7 +2,7 @@
  * Bishop.cpp
  *
  *  Created on: 2 febr. 2016
- *      Author: Jordi
+ *      Author: Jordi Marco
  */
 
 #include<cstdlib>

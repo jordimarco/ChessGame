@@ -63,6 +63,5 @@ int main() {
 	}
 	cout << "1" << endl << chessBoard.toString() << endl;
 	cout << "2" << endl << chessBoard.toString() << endl;
-
 	cout << "3" << endl << chessBoard.toString() << endl;
 }
