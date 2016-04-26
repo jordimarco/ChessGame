@@ -10,8 +10,7 @@
 
 static const std::string colorStrings[] = {" W", " B"};
 
-ChessPiece::ChessPiece(Color color): chessBoard(nullptr), row(-1), column(-1) {
-	this->color = color;
+ChessPiece::ChessPiece(Color color): chessBoard(nullptr), row(-1), column(-1), color(color) {
 }
 
 ChessPiece::~ChessPiece() {

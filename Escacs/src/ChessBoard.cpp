@@ -35,14 +35,19 @@ bool ChessBoard::put(ChessPiece* chessPiece, int row, int column) {
 }
 
 ChessPiece* ChessBoard::get(int row, int column) const {
-	return this->chessBoard[row][column];
+	if(isOnChessBoard(row,column))
+		return this->chessBoard[row][column];
+	return nullptr;
 }
 
 void ChessBoard::empty(int row, int column) {
-	this->chessBoard[row][column]=nullptr;
+	if(isOnChessBoard(row,column))
+		this->chessBoard[row][column]=nullptr;
 }
 
 bool ChessBoard::isEmpty(int row, int column) const {
+	if(!isOnChessBoard(row,column))
+		return true;
 	return this->chessBoard[row][column]==nullptr;
 }
 

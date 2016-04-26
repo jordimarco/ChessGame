@@ -28,7 +28,7 @@ bool Queen::canMoveTo(int row, int column) const {
 	int r = this->row+incR;
 	int c = this->column+incC;
 	while(r!=row || c!=row) {
-		// Bishop cannot move through an occupied square
+		// Queen cannot move through an occupied square
 		if(!chessBoard->isEmpty(r,c)) return false;
 		r += incR;
 		c += incC;
