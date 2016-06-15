@@ -27,7 +27,7 @@ bool Bishop::canMoveTo(int row, int column) const {
 	int incC = dc/abs(dc);
 	int r = this->row+incR;
 	int c = this->column+incC;
-	while(r!=row || c!=row) {
+	while(r!=row || c!=column) {
 		// Bishop cannot move through an occupied square
 		if(!chessBoard->isEmpty(r,c)) return false;
 		r += incR;
