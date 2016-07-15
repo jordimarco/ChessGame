@@ -15,6 +15,7 @@ class ChessBoard;
 class ChessPiece {
 public:
 	enum class Color{WHITE=0,BLACK=1};
+    friend std::ostream& operator<< (std::ostream &out, const Color &color);
 protected:
 	Color color;
 	ChessBoard* chessBoard;

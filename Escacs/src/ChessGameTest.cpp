@@ -5,10 +5,12 @@ using namespace std;
 
 int main() {
 	ChessGame chessGame;
-	chessGame.play();
+	cout << chessGame << endl;
 	int ro,co,rd,cd;
-	while(cin>>ro>>co>>rd>>cd) {
+	while(!chessGame.isCheckmate()) {
+		cin>>ro>>co>>rd>>cd;
 		chessGame.move(ro,co,rd,cd);
-		chessGame.play();
+		cout << chessGame << endl;
 	}
+	cout << "Check Mate! Player " << chessGame.currentPlayer() <<  " wins!" << endl;
 }

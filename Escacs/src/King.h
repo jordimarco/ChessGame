@@ -11,11 +11,14 @@
 #include "ChessPiece.h"
 
 class King : public ChessPiece {
+	bool tryToMove(int row, int column) const;
 public:
 	King(Color color);
 	virtual ~King();
 	virtual bool canMoveTo(int row, int column) const;
 	virtual std::string toString() const;
+	bool isAlive() const;
+	bool isInCheck() const;
 };
 
 #endif /* KING_H_ */

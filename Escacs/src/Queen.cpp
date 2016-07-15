@@ -8,6 +8,7 @@
 #include<cstdlib>
 #include "Queen.h"
 #include "ChessBoard.h"
+#include <iostream>
 
 Queen::Queen(Color color) : ChessPiece(color) {
 	// TODO Auto-generated constructor stub
@@ -27,7 +28,7 @@ bool Queen::canMoveTo(int row, int column) const {
 	int incC = dc==0?0:dc/abs(dc);
 	int r = this->row+incR;
 	int c = this->column+incC;
-	while(r!=row || c!=row) {
+	while(r!=row || c!=column) {
 		// Queen cannot move through an occupied square
 		if(!chessBoard->isEmpty(r,c)) return false;
 		r += incR;

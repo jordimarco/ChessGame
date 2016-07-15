@@ -7,8 +7,10 @@
 
 #include "ChessPiece.h"
 #include "ChessBoard.h"
+#include <iostream>
 
 static const std::string colorStrings[] = {" W", " B"};
+static const std::string colorNames[] = {"WHITE", "BLACK"};
 
 ChessPiece::ChessPiece(Color color): chessBoard(nullptr), row(-1), column(-1), color(color) {
 }
@@ -36,8 +38,10 @@ void ChessPiece::removeFromChessBoard() {
 
 bool ChessPiece::moveTo(int row, int column) {
 	if(!this->canMoveTo(row, column)) return false;
-	this->chessBoard->empty(this->row,this->column);
 	this->chessBoard->put(this, row, column);
+	this->chessBoard->empty(this->row,this->column);
+	this->row = row;
+	this->column = column;
 	return true;
 }
 
@@ -54,5 +58,9 @@ const ChessPiece::Color& ChessPiece::getColor() const {
 
 std::string ChessPiece::toString() const {
 	return colorStrings[(int)this->getColor()];
+}
+
+std::ostream& operator<< (std::ostream &out, const ChessPiece::Color &color) {
+	return out << colorNames[(int)color];
 }
 
